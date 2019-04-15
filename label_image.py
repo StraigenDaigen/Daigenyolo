@@ -146,17 +146,6 @@ if __name__ == "__main__":
 
   print('\nEvaluation time (1-image): {:.3f}s\n'.format(end-start))
 
-"""
-  for i in top_k:
-    print(labels[i], results[i])
-    text_por =  str(labels[0])+" "+str(results[0])+"\n"+str(labels[1])+" "+str(results[1])+"\n"+ str(labels[2])+" "+str(results[2])+"\n"+ str(labels[3])+" "+str(results[3])+"\n"+ str(labels[4])+" "+str(results[4])+ "\n"+ str(labels[5])+" "+str(results[5])
-    mayor = 0
-    for i in range(0,6):
-        if (results[mayor]<results[i]):
-            mayor = i
-            
-            """
-
   for i in top_k:
     print(labels[i], results[i])
     text_por =  str(labels[0])+" "+str(results[0])+"\n"+str(labels[1])+" "+str(results[1])+"\n"+ str(labels[2])+" "+str(results[2])
@@ -164,9 +153,7 @@ if __name__ == "__main__":
     for i in range(0,3):
         if (results[mayor]<results[i]):
             mayor = i
-
-"""  
-
+"""            
 def imagenV():
     rel_path = os.path.normpath(file_name)
     root = tk.Tk()
@@ -179,9 +166,7 @@ def imagenV():
                   padx = 100,
                   text=labels[mayor] + ": \n" + str(results[mayor]*100)+"%" ).pack(side="left",)
     label.pack()
-    root.mainloop()  
-    
-  
+    root.mainloop()        
 t = threading.Thread(target=imagenV, name='ImagenV')
 t.start()
 arduino = serial.Serial('COM3', 115200)
@@ -216,4 +201,4 @@ if(labels[mayor] == labels[5]):
     time.sleep(2) 
     arduino.write(b"6/r/n")
     print(algo)
-"""
+    """
