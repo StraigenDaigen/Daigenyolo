@@ -21,7 +21,7 @@ import argparse
 import sys
 import time
 import os
-import serial
+#import serial
 import numpy as np
 import tensorflow as tf
 import cv2
@@ -30,7 +30,7 @@ from tkinter import *
 from tkinter import Label
 from PIL import ImageTk, Image
 import threading
-import serial
+#import serial
 def worker():
 #        algo =  str.encode('2')
         arduino = serial.Serial('COM5', 115200, timeout = 0.5) ## Si este código se pone aqui, primero 
@@ -141,19 +141,21 @@ if __name__ == "__main__":
     end=time.time()
   results = np.squeeze(results)
 
-  top_k = results.argsort()[-6:][::-1]
+  top_k = results.argsort()[-3:][::-1]
   labels = load_labels(label_file)
 
   print('\nEvaluation time (1-image): {:.3f}s\n'.format(end-start))
 
   for i in top_k:
-    print(labels[i], results[i])
+    #print(labels[i], results[i])
     text_por =  str(labels[0])+" "+str(results[0])+"\n"+str(labels[1])+" "+str(results[1])+"\n"+ str(labels[2])+" "+str(results[2])
     mayor = 0
-    for i in range(0,3):
+    for i in range(0,2):
         if (results[mayor]<results[i]):
             mayor = i
-"""            
+  print(labels[i], results[i])
+            
+"""          
 def imagenV():
     rel_path = os.path.normpath(file_name)
     root = tk.Tk()
@@ -166,7 +168,9 @@ def imagenV():
                   padx = 100,
                   text=labels[mayor] + ": \n" + str(results[mayor]*100)+"%" ).pack(side="left",)
     label.pack()
-    root.mainloop()        
+    root.mainloop() 
+
+     
 t = threading.Thread(target=imagenV, name='ImagenV')
 t.start()
 arduino = serial.Serial('COM3', 115200)
