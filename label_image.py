@@ -165,6 +165,8 @@ if __name__ == "__main__":
         if (results[mayor]<results[i]):
             mayor = i
 
+"""  
+
 def imagenV():
     rel_path = os.path.normpath(file_name)
     root = tk.Tk()
@@ -179,7 +181,7 @@ def imagenV():
     label.pack()
     root.mainloop()  
     
-"""  
+  
 t = threading.Thread(target=imagenV, name='ImagenV')
 t.start()
 arduino = serial.Serial('COM3', 115200)
