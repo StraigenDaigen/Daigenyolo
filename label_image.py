@@ -141,19 +141,20 @@ if __name__ == "__main__":
     end=time.time()
   results = np.squeeze(results)
 
-  top_k = results.argsort()[-3:][::-1]
+  top_k = results.argsort()[-1:][::-1]
   labels = load_labels(label_file)
 
   print('\nEvaluation time (1-image): {:.3f}s\n'.format(end-start))
 
   for i in top_k:
-    #print(labels[i], results[i])
+    print(labels[i], results[i])
     text_por =  str(labels[0])+" "+str(results[0])+"\n"+str(labels[1])+" "+str(results[1])+"\n"+ str(labels[2])+" "+str(results[2])
     mayor = 0
     for i in range(0,2):
         if (results[mayor]<results[i]):
             mayor = i
-  print(labels[i], results[i])
+    #print(labels[i], results[i])            
+
             
 """          
 def imagenV():
