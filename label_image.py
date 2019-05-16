@@ -150,10 +150,10 @@ if __name__ == "__main__":
 
   for i in top_k:
     print(labels[i], results[i])
-    os.rename("G:/Mi unidad/Todo_Tesis/STEVEN/tensorflow-for-poets-2/scripts/image.jpg",str(labels[i])+"_"+now.strftime("(%Y-%m-%d)-(%H-%M-%S)")+".jpg")
-    text_por =  str(labels[0])+" "+str(results[0])+"\n"+str(labels[1])+" "+str(results[1])+"\n"+ str(labels[2])+" "+str(results[2])
+    os.rename("G:/Mi unidad/Todo_Tesis_Testeo/Entrenamiento/tensorflow-for-poets-2/scripts/image.jpg",str(labels[i])+"_"+now.strftime("(%Y-%m-%d)-(%H-%M-%S)")+".jpg")
+    text_por =  str(labels[0])+" "+str(results[0])+"\n"+str(labels[1])+" "+str(results[1])+"\n"+ str(labels[2])+" "+str(results[2])+"\n"+ str(labels[3])+" "+str(results[3])+"\n"+ str(labels[4])+" "+str(results[4])+"\n"+ str(labels[5])+" "+str(results[5])+"\n"+ str(labels[6])+" "+str(results[6])+"\n"+ str(labels[7])+" "+str(results[7])
     mayor = 0
-    for i in range(0,2):
+    for i in range(0,7):
         if (results[mayor]<results[i]):
             mayor = i
     #print(labels[i], results[i])            
