@@ -1,2 +1,2 @@
 # Daigenyolo
-Tesis Yolo
+Parte 1 - Deep Learning Tesis 
