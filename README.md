@@ -14,6 +14,7 @@ Steven Parra Giraldo
 Supervisado por:
 
 Jesús Alfonso Lopez
+
 Zeida Solarte
 
 Parte 1 - Deep Learning - Clasificación de Estado de Nivel de Ocupación
