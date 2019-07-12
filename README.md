@@ -11,6 +11,11 @@ Lucas Bechara Echeverry
 
 Steven Parra Giraldo
 
+Supervisado por:
+
+Jesús Alfonso Lopez
+Zeida Solarte
+
 Parte 1 - Deep Learning - Clasificación de Estado de Nivel de Ocupación
 
 Estos códigos están diseñados para funcionar en Google Colaboratory, se añaden para que las personas que deseen tener más información, la puedan obtener. Sin embargo, los que deseen clonar el repositorio tendrán que hacer sus propias modificaciones de rutas de acceso y sus propios Dataset que no son de caracter público. 
